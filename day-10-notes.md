@@ -23,3 +23,22 @@
 
 ## Fixes / Notes
 -
+Day 10 Key Points
+
+- A branch is a separate line of development
+- main is the stable production branch
+- New work should be done on a branch
+- git switch changes between branches
+- git merge brings branch work into main
+- Branches can be safely deleted after merging
+
+Workflow today:
+- Create branch
+- Switch to branch
+- Commit work
+- Switch to main
+- Merge branch
+- Push to GitHub
+- Delete branch
+
+This is how professionals work safely.
