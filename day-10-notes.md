@@ -42,3 +42,6 @@ Workflow today:
 - Delete branch
 
 This is how professionals work safely.
+ 
+
+This line is from day-11-conflict branch.
