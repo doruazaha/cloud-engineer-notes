@@ -19,4 +19,4 @@
 - Nothing is saved in history until you commit
 - Local commits are safe even without GitHub
 
-
+# I can create, stage, and commit a file without help
