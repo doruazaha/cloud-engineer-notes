@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 DISK_THRESHOLD=1
@@ -42,4 +41,13 @@ MEM_STATUS="OK: MEM ${MEM_USAGE}%"
 fi
 
 # ---- Final Report ----
-echo "$TIMESTAMP | $STATUS | $DISK_STATUS | $CPU_STATUS | $MEM_STATUS" | tee -a "$LOG_FILE"
+# Build output line
+OUTPUT="$TIMESTAMP | $STATUS | $DISK_STATUS | $CPU_STATUS | $MEM_STATUS"
+
+# Log it
+echo "$OUTPUT" | tee -a "$LOG_FILE"
+
+# Alert locally if WARNING
+if echo "$OUTPUT" | grep -q "WARNING"; then
+echo "$OUTPUT" | mail -s "System Health Alert" doru
+fi
